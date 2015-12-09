@@ -1,0 +1,13 @@
+﻿@model DateTime
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Test</h2>
+        <p>@Model.ToLongDateString()</p>
+        <p>@Model.ToString("HH:mm:ss:f")</p>
+        @Html.ActionLink("Refresh", "Index", "Home", htmlAttributes: new { id = "loginLink", @class="btn btn-default" })
+    </div>
+</div>
